@@ -66,7 +66,7 @@ class User(db.Model):
         return [User.json_debug(user) for user in User.query.all()]
 
     @staticmethod
-      def get_user(username): # SQLi Injection 
+    def get_user(username): # SQLi Injection 
         fin_query = User.query.filter_by(username=username).first()
         return fin_query
 
